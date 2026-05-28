@@ -31,9 +31,9 @@ class ProfileViewController: UIViewController {
         namelabel.text = "Петров Вячеслав"
         namelabel.textColor = .white
         namelabel.font = .boldSystemFont(ofSize: 23)
-        self.nameLabel = namelabel
         namelabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(namelabel)
+        self.nameLabel = namelabel
         namelabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
         namelabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8).isActive = true
         namelabel.widthAnchor.constraint(equalToConstant: 241).isActive = true
@@ -51,7 +51,7 @@ class ProfileViewController: UIViewController {
         view.addSubview(usernameLabel)
         NSLayoutConstraint.activate([
             usernameLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
-            usernameLabel.topAnchor.constraint(equalTo: nameLabel!.bottomAnchor, constant: 8),
+            usernameLabel.topAnchor.constraint(equalTo: namelabel.bottomAnchor, constant: 8),
             usernameLabel.widthAnchor.constraint(equalToConstant: 99)
         ])
         let descriptionLabel = UILabel()
